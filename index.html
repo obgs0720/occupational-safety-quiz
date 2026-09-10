@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>職業安全管理學科測驗</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">22000 職業安全管理</p>
+        <h1>職業安全管理學科測驗</h1>
+        <p class="subtitle">每次隨機抽出 10 題，答對的題目會在下次測驗中自動排除。</p>
+      </div>
+      <div class="progress-card">
+        <span>目前題庫</span>
+        <strong id="bank-count">0 題</strong>
+        <small id="mastery-text">尚未作答</small>
+      </div>
+    </header>
+    <section id="quiz-panel" class="panel">
+      <div class="panel-heading">
+        <div><span class="section-label">本次測驗</span><h2>請選出正確答案</h2></div>
+        <div class="quiz-meta"><span id="quiz-count">0 / 10</span><span id="timer">—</span></div>
+      </div>
+      <form id="quiz-form"></form>
+      <button id="submit-btn" class="primary-btn" type="button">送出答案並計分</button>
+    </section>
+    <section id="result-panel" class="panel hidden" aria-live="polite">
+      <div class="result-summary"><div><span class="section-label">測驗結果</span><h2 id="score-title">得分</h2></div><div class="score-ring"><strong id="score-value">0</strong><span>分</span></div></div>
+      <p id="result-message" class="result-message"></p>
+      <div id="wrong-list"></div>
+      <button id="retry-btn" class="primary-btn" type="button">再次測驗</button>
+    </section>
+    <footer>答對題目會永久保留在本機的學習進度中；可按「清除進度」重新開始。</footer>
+    <button id="reset-btn" class="text-btn" type="button">清除進度</button>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
